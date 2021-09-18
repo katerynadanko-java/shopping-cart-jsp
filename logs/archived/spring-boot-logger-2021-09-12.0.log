@@ -1,0 +1,67 @@
+2021-09-12 17:04:39,537 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s413ms823µs300ns).
+2021-09-12 17:05:38,104 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m703ms877µs900ns).
+2021-09-12 17:06:28,136 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s31ms214µs200ns).
+2021-09-12 17:07:09,808 INFO org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [Thread-15] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-09-12 17:07:10,036 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-1 - Shutdown initiated...
+2021-09-12 17:07:10,038 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-1 - Shutdown completed.
+2021-09-12 17:07:10,307 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ShoppingCartJspApplication using Java 1.8.0_271 on DESKTOP-5SVAMIL with PID 11812 (D:\Kate\LessonsHillel\03\lesson08\shopping-cart-jsp\target\classes started by pc in D:\Kate\LessonsHillel\03\lesson08\shopping-cart-jsp)
+2021-09-12 17:07:10,307 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.4, Spring v5.3.9
+2021-09-12 17:07:10,307 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: prod
+2021-09-12 17:07:10,858 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2021-09-12 17:07:10,860 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2021-09-12 17:07:10,885 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-12 17:07:10,891 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-09-12 17:07:10,948 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-12 17:07:11,164 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ShoppingCartJspApplication in 0.893 seconds (JVM running for 328.898)
+2021-09-12 17:07:11,395 INFO org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-09-12 17:07:11,602 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown initiated...
+2021-09-12 17:07:11,605 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown completed.
+2021-09-12 17:07:14,325 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ShoppingCartJspApplication using Java 1.8.0_271 on DESKTOP-5SVAMIL with PID 11284 (D:\Kate\LessonsHillel\03\lesson08\shopping-cart-jsp\target\classes started by pc in D:\Kate\LessonsHillel\03\lesson08\shopping-cart-jsp)
+2021-09-12 17:07:14,328 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.4, Spring v5.3.9
+2021-09-12 17:07:14,328 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: prod
+2021-09-12 17:07:15,622 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-09-12 17:07:15,623 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-09-12 17:07:15,623 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-12 17:07:15,889 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-09-12 17:07:15,895 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-09-12 17:07:15,922 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-09-12 17:07:16,074 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-09-12 17:07:16,236 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-12 17:07:16,281 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-12 17:07:16,398 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-12 17:07:16,501 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-09-12 17:07:17,098 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-12 17:07:17,773 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-09-12 17:07:17,805 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ShoppingCartJspApplication in 4.095 seconds (JVM running for 5.508)
+2021-09-12 17:07:27,316 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-12 17:08:54,777 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s123ms202µs600ns).
+2021-09-12 17:10:30,310 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s532ms173µs).
+2021-09-12 17:10:39,743 INFO org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [Thread-15] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-09-12 17:10:39,989 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-1 - Shutdown initiated...
+2021-09-12 17:10:39,992 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-1 - Shutdown completed.
+2021-09-12 17:10:40,280 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ShoppingCartJspApplication using Java 1.8.0_271 on DESKTOP-5SVAMIL with PID 11284 (D:\Kate\LessonsHillel\03\lesson08\shopping-cart-jsp\target\classes started by pc in D:\Kate\LessonsHillel\03\lesson08\shopping-cart-jsp)
+2021-09-12 17:10:40,280 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.4, Spring v5.3.9
+2021-09-12 17:10:40,280 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: prod
+2021-09-12 17:10:40,578 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-09-12 17:10:40,579 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-09-12 17:10:40,579 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-12 17:10:40,662 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-09-12 17:10:40,664 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-09-12 17:10:40,674 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2021-09-12 17:10:40,676 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2021-09-12 17:10:40,703 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-12 17:10:40,707 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-09-12 17:10:40,764 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-12 17:10:40,974 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-09-12 17:10:40,983 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ShoppingCartJspApplication in 0.738 seconds (JVM running for 208.685)
+2021-09-12 17:10:42,383 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-12 20:17:46,194 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-2 housekeeper] HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=3h7m5s416ms277µs800ns).
+2021-09-12 20:17:46,595 INFO org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-09-12 20:17:46,598 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [SpringApplicationShutdownHook] SQL Error: 90121, SQLState: 90121
+2021-09-12 20:17:46,599 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [SpringApplicationShutdownHook] База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-09-12 20:17:46,604 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [SpringApplicationShutdownHook] SQL Error: 90121, SQLState: 90121
+2021-09-12 20:17:46,605 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [SpringApplicationShutdownHook] База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-09-12 20:17:46,607 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown initiated...
+2021-09-12 20:17:46,613 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown completed.

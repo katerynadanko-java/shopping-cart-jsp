@@ -28,7 +28,7 @@
         <th>Name</th>
         <th>Description</th>
         <th>Price</th>
-        <th>Amount</th>
+<%--        <th>Amount</th>--%>
         <th></th>
         <th></th>
     </tr>
@@ -37,7 +37,7 @@
             <td>${productDTO.name}</td>
             <td>${productDTO.description}</td>
             <td>${caproductrtDTO.price}</td>
-            <td>${productDTO.amount}</td>
+<%--            <td>${productDTO.amount}</td>--%>
             <td>
                 <a href="/edit?id=${productDTO.id}">Edit</a>
             </td>

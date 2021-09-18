@@ -19,4 +19,6 @@ public interface CartService {
 
     Cart deleteAllProductsFromCart(Long cartId);
 
+    List<Cart> getAllByCustomerId(Long customerId);
+
 }

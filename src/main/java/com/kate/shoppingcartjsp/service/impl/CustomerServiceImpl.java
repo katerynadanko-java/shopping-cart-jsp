@@ -22,6 +22,11 @@ public class CustomerServiceImpl implements CustomerService {
         customerRepository.save(customer);
     }
 
+    @Override
+    public Customer getById(Long id) {
+        return customerRepository.getById(id);
+    }
+
     public List<CustomerDTO> getAllCustomers() {
         List<Customer> list = customerRepository.findAll();
         return list.stream()

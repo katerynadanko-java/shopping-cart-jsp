@@ -9,8 +9,9 @@ import java.math.BigDecimal;
 public class ProductDTO {
     private Long id;
     private String name;
+    private String description;
     private BigDecimal price;
-    private Integer amount;
+//    private Integer amount;
 
     public ProductDTO() {
 
@@ -19,8 +20,9 @@ public class ProductDTO {
     public ProductDTO(Product product) {
         this.id = id;
         this.name = name;
+        this.description = description;
         this.price = price;
-        this.amount = amount;
+//        this.amount = amount;
     }
 
 }

@@ -12,14 +12,16 @@ public class CartDTO {
     private Long id;
     private BigDecimal sum = BigDecimal.ZERO;
     private List<Product> products;
+    private Integer amount;
 
     public CartDTO() {
     }
 
-    public CartDTO(Long id, BigDecimal sum, List<Product> products) {
+    public CartDTO(Long id, BigDecimal sum, List<Product> products, Integer amount) {
         this.id = id;
         this.sum = sum;
         this.products = products;
+        this.amount = amount;
     }
 
 }

@@ -9,7 +9,7 @@ public class ProductConverter {
         newProduct.setId(product.getId());
         newProduct.setName(product.getName());
         newProduct.setPrice(product.getPrice());
-        newProduct.setAmount(product.getAmount());
+//        newProduct.setAmount(product.getAmount());
 
         return newProduct;
     }
@@ -19,7 +19,7 @@ public class ProductConverter {
         newProduct.setId(productDto.getId());
         newProduct.setName(productDto.getName());
         newProduct.setPrice(productDto.getPrice());
-        newProduct.setAmount(productDto.getAmount());
+//        newProduct.setAmount(productDto.getAmount());
 
         return newProduct;
     }

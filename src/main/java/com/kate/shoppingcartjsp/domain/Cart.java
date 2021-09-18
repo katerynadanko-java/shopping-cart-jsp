@@ -30,6 +30,8 @@ public class Cart {
     private BigDecimal sum = BigDecimal.ZERO;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Product> products;
+    @Column(name = "amount")
+    private Integer amount;
 
     public Cart(Cart cart) {
 

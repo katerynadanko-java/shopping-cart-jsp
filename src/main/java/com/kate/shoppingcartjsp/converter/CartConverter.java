@@ -9,6 +9,7 @@ public class CartConverter {
         newCart.setId(cart.getId());
         newCart.setSum(cart.getSum());
         newCart.setProducts(cart.getProducts());
+        newCart.setAmount(cart.getAmount());
 
         return newCart;
     }
@@ -18,6 +19,7 @@ public class CartConverter {
         newCart.setId(cartDto.getId());
         newCart.setSum(cartDto.getSum());
         newCart.setProducts(cartDto.getProducts());
+        newCart.setAmount(cartDto.getAmount());
 
         return newCart;
     }

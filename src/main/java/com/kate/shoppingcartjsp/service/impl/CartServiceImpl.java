@@ -27,6 +27,7 @@ public class CartServiceImpl implements CartService {
 
     @Autowired
     private ProductRepository productRepository;
+
     List<Product> products = new ArrayList<>();
     List<Cart> carts = new ArrayList<>();
 
@@ -57,7 +58,7 @@ public class CartServiceImpl implements CartService {
         Product product = productRepository.getById(productId);
         Optional<Cart> cartOptional = cartRepository.findById(cartId);
         Cart cart = cartOptional.get();
-        product.setAmount(amount);
+        cart.setAmount(amount);
         products.add(product);
         cart.setProducts(products);
         BigDecimal bigDecimalSum = countSum(cart);
@@ -76,7 +77,7 @@ public class CartServiceImpl implements CartService {
         Cart cart = cartRepository.getById(cartId);
         for (Product p : cart.getProducts()) {
             if (productId.equals(p.getId())) {
-                p.setAmount(amount);
+                cart.setAmount(amount);
                 BigDecimal bigDecimalSum = countSum(cart);
                 cart.setSum(bigDecimalSum);
                 cartRepository.save(cart);
@@ -97,7 +98,7 @@ public class CartServiceImpl implements CartService {
         Cart cart = cartRepository.getById(cartId);
         for (Product p : cart.getProducts()) {
             if (productId.equals(p.getId())) {
-                p.setAmount((p.getAmount()) - 1);
+                cart.setAmount((cart.getAmount()) - 1);
                 BigDecimal bigDecimalSum = countSum(cart);
                 cart.setSum(bigDecimalSum);
                 cartRepository.save(cart);
@@ -116,10 +117,15 @@ public class CartServiceImpl implements CartService {
         return cartRepository.save(cart);
     }
 
+    @Override
+    public List<Cart> getAllByCustomerId(Long customerId) {
+        return customerRepository.getById(customerId).getCarts();
+    }
+
     public BigDecimal countSum(Cart cart) {
         BigDecimal sum = BigDecimal.ZERO;
         for (Product p : cart.getProducts()) {
-            sum = sum.add(p.getPrice().multiply(BigDecimal.valueOf(p.getAmount())));
+            sum = sum.add(p.getPrice().multiply(BigDecimal.valueOf(cart.getAmount())));
         }
         cart.setSum(sum);
         return sum;

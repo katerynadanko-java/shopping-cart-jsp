@@ -17,43 +17,40 @@ import java.util.Map;
 import static com.kate.shoppingcartjsp.converter.ProductConverter.convertToProduct;
 
 @Controller
-@RequestMapping("api/product")
+public class ProductController {
 
-    public class ProductController {
+    @Autowired private ProductService productService;
 
-        @Autowired
-        private ProductService productService;
-
-        @GetMapping("/registration")
-        public String createProduct(Map<String, Object> model) {
-            model.put("productDTO", new ProductDTO());
-            return "prodRegistration";
-        }
-
-        @PostMapping("/home")
-        public String createProduct(@ModelAttribute("productDto") ProductDTO productDTO) {
-            productService.createProduct(convertToProduct(productDTO));
-            return "redirect:api/product/productList";
-        }
-
-        @GetMapping("/list")
-        public String listOfProduct(Model model) {
-            List<ProductDTO> productList = productService.getAll();
-            model.addAttribute("ProductList", productList);
-            return "productList";
-        }
-
-        @PostMapping("/delete")
-        public String deleteProduct(@RequestParam("id") String id) {
-            productService.deleteById(Long.parseLong(id));
-            return "redirect:api/product/productlist";
-        }
-
-        @GetMapping("/edit")
-        public String editProduct(@RequestParam("id") String id, Map<String, Object> model) {
-            ProductDTO productDTO = productService.editProduct(Long.parseLong(id));
-            model.put("productDTO", productDTO);
-            return "prodRegistration";
-        }
-
+    @GetMapping("api/product/registration")
+    public String createProduct(Map<String, Object> model) {
+        model.put("productDTO", new ProductDTO());
+        return "prodRegistration";
     }
+
+    @PostMapping("api/product/home")
+    public String createProduct(@ModelAttribute("productDto") ProductDTO productDTO) {
+        productService.createProduct(convertToProduct(productDTO));
+        return "redirect:api/product/list";
+    }
+
+    @GetMapping("api/product/list")
+    public String listOfProduct(Model model) {
+        List<ProductDTO> productList = productService.getAll();
+        model.addAttribute("ProductList", productList);
+        return "productList";
+    }
+
+    @PostMapping("api/product/delete")
+    public String deleteProduct(@RequestParam("id") String id) {
+        productService.deleteById(Long.parseLong(id));
+        return "redirect:api/product/list";
+    }
+
+    @GetMapping("api/product/edit")
+    public String editProduct(@RequestParam("id") String id, Map<String, Object> model) {
+        ProductDTO productDTO = productService.editProduct(Long.parseLong(id));
+        model.put("productDTO", productDTO);
+        return "prodRegistration";
+    }
+
+}
