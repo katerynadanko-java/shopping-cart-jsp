@@ -1,6 +1,7 @@
 package com.kate.shoppingcartjsp.controller;
 
 import com.kate.shoppingcartjsp.dto.CustomerDTO;
+import com.kate.shoppingcartjsp.facade.CustomerFacade;
 import com.kate.shoppingcartjsp.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,9 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
+    @Autowired
+    private CustomerFacade customerFacade;
+
     @GetMapping("/registration")
     public String createCustomer(Map<String, Object> model) {
 
@@ -33,13 +37,13 @@ public class CustomerController {
 
     @PostMapping("/home")
     public String createCustomer(@ModelAttribute("customerDto") CustomerDTO customerDTO) {
-        customerService.createOrUpdateCustomer(convertToCustomer(customerDTO));
+        customerFacade.createOrUpdateCustomer(convertToCustomer(customerDTO));
         return "redirect:/list";
     }
 
     @GetMapping("/list")
     public String listOfCustomer(Model model) {
-        List<CustomerDTO> customerList = customerService.getAllCustomers();
+        List<CustomerDTO> customerList = customerFacade.getAllCustomers();
         model.addAttribute("customerList", customerList);
         return "customerList";
     }
@@ -52,9 +56,8 @@ public class CustomerController {
 
     @GetMapping("/edit")
     public String editCustomer(@RequestParam("id") String id, Map<String, Object> model) {
-        CustomerDTO customerDTO = customerService.editCustomer(Long.parseLong(id));
+        CustomerDTO customerDTO = customerFacade.editCustomer(Long.parseLong(id));
         model.put("customerDTO", customerDTO);
         return "СustomerRegistration";
     }
-
 }

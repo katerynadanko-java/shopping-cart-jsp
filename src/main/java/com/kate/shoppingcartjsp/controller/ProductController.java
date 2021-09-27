@@ -1,6 +1,7 @@
 package com.kate.shoppingcartjsp.controller;
 
 import com.kate.shoppingcartjsp.dto.ProductDTO;
+import com.kate.shoppingcartjsp.facade.ProductFacade;
 import com.kate.shoppingcartjsp.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,38 +18,42 @@ import java.util.Map;
 import static com.kate.shoppingcartjsp.converter.ProductConverter.convertToProduct;
 
 @Controller
+@RequestMapping("api/product")
 public class ProductController {
 
-    @Autowired private ProductService productService;
+    @Autowired
+    private ProductService productService;
+    @Autowired
+    private ProductFacade productFacade;
 
-    @GetMapping("api/product/registration")
+    @GetMapping("/registration")
     public String createProduct(Map<String, Object> model) {
         model.put("productDTO", new ProductDTO());
         return "prodRegistration";
     }
 
-    @PostMapping("api/product/home")
+    @PostMapping("/home")
     public String createProduct(@ModelAttribute("productDto") ProductDTO productDTO) {
-        productService.createProduct(convertToProduct(productDTO));
+        productFacade.createProduct(convertToProduct(productDTO));
         return "redirect:api/product/list";
     }
 
-    @GetMapping("api/product/list")
+    @GetMapping("/list")
     public String listOfProduct(Model model) {
-        List<ProductDTO> productList = productService.getAll();
+        List<ProductDTO> productList = productFacade.getAll();
         model.addAttribute("ProductList", productList);
         return "productList";
     }
 
-    @PostMapping("api/product/delete")
+    @PostMapping("/delete")
     public String deleteProduct(@RequestParam("id") String id) {
         productService.deleteById(Long.parseLong(id));
         return "redirect:api/product/list";
     }
 
-    @GetMapping("api/product/edit")
+    @GetMapping("/edit")
     public String editProduct(@RequestParam("id") String id, Map<String, Object> model) {
-        ProductDTO productDTO = productService.editProduct(Long.parseLong(id));
+        ProductDTO productDTO = productFacade.editProduct(Long.parseLong(id));
         model.put("productDTO", productDTO);
         return "prodRegistration";
     }
