@@ -10,5 +10,7 @@ public interface CustomerFacade {
 
     List<CustomerDTO> getAllCustomers();
 
+    void deleteCustomer(Long id);
+
     CustomerDTO editCustomer(Long id);
 }

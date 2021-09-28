@@ -37,6 +37,11 @@ public class ProductFacadeImpl implements ProductFacade {
     public ProductDTO createProduct(Product product) {
         return convertToProductDto(productRepository.save(product));
     }
+    @Override
+    public String deleteById(Long id) {
+        productRepository.deleteById(id);
+        return String.valueOf(id);
+    }
 
     @Override
     public ProductDTO updatePrice(Long productId, BigDecimal price) {

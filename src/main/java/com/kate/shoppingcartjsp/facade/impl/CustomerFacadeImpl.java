@@ -29,8 +29,15 @@ public class CustomerFacadeImpl implements CustomerFacade {
                 .collect(Collectors.toCollection(ArrayList::new));
     }
     @Override
+    public void deleteCustomer(Long id) {
+        customerRepository.deleteById(id);
+    }
+    @Override
     public CustomerDTO editCustomer(Long id) {
         Customer emp = customerRepository.getOne(id);
         return convertToCustomerDto(emp);
     }
+
+
+
 }

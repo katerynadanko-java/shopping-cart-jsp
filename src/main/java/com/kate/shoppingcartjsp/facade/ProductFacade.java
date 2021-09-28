@@ -19,6 +19,8 @@ public interface ProductFacade {
 
     List<ProductDTO> getAll();
 
+    String deleteById(Long id);
+
     ProductDTO createProduct(Product product);
 
     ProductDTO updatePrice(Long productId, BigDecimal price);

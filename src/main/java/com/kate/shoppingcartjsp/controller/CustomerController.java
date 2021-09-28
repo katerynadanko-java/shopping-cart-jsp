@@ -2,7 +2,6 @@ package com.kate.shoppingcartjsp.controller;
 
 import com.kate.shoppingcartjsp.dto.CustomerDTO;
 import com.kate.shoppingcartjsp.facade.CustomerFacade;
-import com.kate.shoppingcartjsp.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,9 +19,6 @@ import static com.kate.shoppingcartjsp.converter.CustomerConverter.convertToCust
 @Controller
 @RequestMapping
 public class CustomerController {
-
-    @Autowired
-    private CustomerService customerService;
 
     @Autowired
     private CustomerFacade customerFacade;
@@ -50,7 +46,7 @@ public class CustomerController {
 
     @PostMapping("/delete")
     public String deleteCustomer(@RequestParam("id") String id) {
-        customerService.deleteCustomer(Long.parseLong(id));
+        customerFacade.deleteCustomer(Long.parseLong(id));
         return "redirect:/list";
     }
 

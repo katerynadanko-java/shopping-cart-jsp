@@ -2,7 +2,6 @@ package com.kate.shoppingcartjsp.controller;
 
 import com.kate.shoppingcartjsp.dto.ProductDTO;
 import com.kate.shoppingcartjsp.facade.ProductFacade;
-import com.kate.shoppingcartjsp.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,8 +20,6 @@ import static com.kate.shoppingcartjsp.converter.ProductConverter.convertToProdu
 @RequestMapping("api/product")
 public class ProductController {
 
-    @Autowired
-    private ProductService productService;
     @Autowired
     private ProductFacade productFacade;
 
@@ -47,7 +44,7 @@ public class ProductController {
 
     @PostMapping("/delete")
     public String deleteProduct(@RequestParam("id") String id) {
-        productService.deleteById(Long.parseLong(id));
+        productFacade.deleteById(Long.parseLong(id));
         return "redirect:api/product/list";
     }
 
